@@ -1,16 +1,13 @@
 package com.valentinerutto.architecturetemplate.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import coil.load
-import com.valentinerutto.architecturetemplate.R
 import com.valentinerutto.architecturetemplate.databinding.FragmentFirstBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -18,7 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
-    private val dogImageViewModel:DogImageViewModel  by sharedViewModel()
+    private val dogImageViewModel: DogImageViewModel by sharedViewModel()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,11 +34,11 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dogImageViewModel.imageResponse.observe(viewLifecycleOwner){
+        dogImageViewModel.imageResponse.observe(viewLifecycleOwner) {
 
-    binding.imgCover.load("${it.url}")
+            binding.imgCover.load("${it.url}")
 
-}
+        }
 
     }
 
