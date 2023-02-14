@@ -35,9 +35,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         dogImageViewModel.imageResponse.observe(viewLifecycleOwner) {
-
             binding.imgCover.load("${it.url}")
-
         }
 
     }
