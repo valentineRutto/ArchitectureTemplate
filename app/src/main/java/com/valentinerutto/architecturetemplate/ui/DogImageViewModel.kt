@@ -9,6 +9,7 @@ import com.valentinerutto.architecturetemplate.data.DogImageRepository
 import com.valentinerutto.architecturetemplate.utils.Resource
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class DogImageViewModel(private val dogImageRepository: DogImageRepository) : ViewModel() {
@@ -30,7 +31,7 @@ class DogImageViewModel(private val dogImageRepository: DogImageRepository) : Vi
 
             is Resource.Success -> {
                 _imageResponse.postValue(response.data!!)
-                _image.value = response.data
+                _image.update { it.copy(url = response.data.url) }
             }
         }
 
