@@ -16,4 +16,8 @@ This application consumes [Dogs Api ](https://dog.ceo/dog-api/documentation/rand
 
 
 # ScreenShots 
+-XmlUi
 <img src="https://user-images.githubusercontent.com/10762793/218540946-1e8dc9cf-6d10-49ae-b6da-5fb0fc5a6a22.png" width="260">&emsp;
+-Compose UI
+<img src="https://user-images.githubusercontent.com/10762793/218992471-677f2380-9138-4222-9738-2f54e3dff987.png" width="260">&emsp;
+
